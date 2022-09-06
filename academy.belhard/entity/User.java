@@ -4,9 +4,6 @@ public class User extends Person {
     private String email;
     private String password;
 
-    private String fullInfo;
-
-
     public User (String firstName, String lastName, String email, String password) {
         super (firstName, lastName);
         this.email = email;
@@ -14,9 +11,7 @@ public class User extends Person {
     }
 
     public String getFullInfo () {
-        this.fullName = super.getFullName();
-        StringBuilder sb = new StringBuilder();
-        return  fullInfo = String.valueOf("Name: " + fullName + "\n" + "Email: " + email);
+        return  String.valueOf("Name: " + super.getFullName() + "\n" + "Email: " + email);
     }
 
     public boolean isPasswordCorrect (String enteredPassword) {
